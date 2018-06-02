@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="432.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerText">
+    <left>
+        <VBox prefHeight="375.0" prefWidth="89.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button id="TextBtn" fx:id="TextBtn" mnemonicParsing="false" prefHeight="210.0" prefWidth="89.0" text="Text Editor" />
+                <Button id="DrawBtn" fx:id="DrawBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#OnButtonClickDraw" prefHeight="210.0" prefWidth="89.0" text="Drawing" />
+            </children>
+        </VBox>
+    </left>
+    <top>
+        <MenuBar prefHeight="25.0" prefWidth="1252.0" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem id="SaveTxtArea" fx:id="SaveTxtArea" mnemonicParsing="false" onAction="#OnItemSave" text="save text file" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TextArea id="TxtArea" fx:id="TxtArea" prefHeight="375.0" prefWidth="1222.0" BorderPane.alignment="BOTTOM_RIGHT" />
+    </center>
+</BorderPane>
